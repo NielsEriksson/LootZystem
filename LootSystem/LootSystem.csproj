@@ -129,16 +129,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ConfirmNewDataBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ConfirmNewDataBase.Designer.cs">
+      <DependentUpon>ConfirmNewDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LootSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LootSystem.Designer.cs">
+      <DependentUpon>LootSystem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ConfirmNewDataBase.resx">
+      <DependentUpon>ConfirmNewDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LootSystem.resx">
+      <DependentUpon>LootSystem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -166,6 +184,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\LifeCraft_Font.ttf" />
     <None Include="Resources\Loot.png" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +207,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="lootyico.ico" />
+    <None Include="Resources\lootsies1.png" />
+    <None Include="Resources\lootsies.png" />
     <None Include="Resources\Swordcursor2.ico" />
     <None Include="Resources\swordcursor.ico" />
     <None Include="Resources\swordcursor.cur" />

@@ -61,6 +61,16 @@ namespace LootSystem.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] LifeCraft_Font {
+            get {
+                object obj = ResourceManager.GetObject("LifeCraft_Font", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Loot {
@@ -76,6 +86,26 @@ namespace LootSystem.Properties {
         internal static System.Drawing.Bitmap Loot1 {
             get {
                 object obj = ResourceManager.GetObject("Loot1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lootsies {
+            get {
+                object obj = ResourceManager.GetObject("lootsies", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lootsies1 {
+            get {
+                object obj = ResourceManager.GetObject("lootsies1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

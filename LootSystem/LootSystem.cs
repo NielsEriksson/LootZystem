@@ -16,7 +16,7 @@ using System.Security.Claims;
 
 namespace LootSystem
 {
-    public partial class Form1 : Form
+    public partial class LootSystem : Form
     {
         public bool correctInfo;
         public NpgsqlCommand addPlayer;
@@ -26,14 +26,16 @@ namespace LootSystem
         public NpgsqlCommand loadPlayers;
         public NpgsqlCommand selectSlots;
         public NpgsqlConnection con;
+
         NpgsqlDataReader dr;
 
-        public Form1()
+        public LootSystem(string ConnectionString)
         {
             Cursor cur = new Cursor(Properties.Resources.Swordcursor2.Handle);
             this.Cursor = cur;            
-            con = new NpgsqlConnection(@"Host = localhost; Database = LootSystem; Username = postgres;Password = Anders9898;Persist Security Info=True");
+            con = new NpgsqlConnection(ConnectionString);
             InitializeComponent();
+            Debug.WriteLine(ConnectionString);
             con.Open();
             NpgsqlCommand LoadCharacters = new NpgsqlCommand("Select character From public.\"PlayersData\" ORDER BY \"character\" ASC ", con);
             dr = LoadCharacters.ExecuteReader();
@@ -47,6 +49,7 @@ namespace LootSystem
             con.Close();
             LoadPlayers();
         }
+    
 
         private void AddPlayerButtonClick_Click(object sender, EventArgs e)
         {
