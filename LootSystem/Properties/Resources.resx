@@ -124,6 +124,9 @@
   <data name="swordcursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\swordcursor.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="lootsies1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lootsies1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LifeCraft_Font" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LifeCraft_Font.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -139,7 +142,7 @@
   <data name="looty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\looty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lootsies1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lootsies1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="looty2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\looty2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

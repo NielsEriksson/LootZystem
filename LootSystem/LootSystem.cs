@@ -293,6 +293,10 @@ namespace LootSystem
                 PlayerAttendanceList.SetItemChecked(i, false);
             }
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

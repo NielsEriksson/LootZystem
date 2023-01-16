@@ -783,11 +783,11 @@
             this.ClearAttendanceButton.UseVisualStyleBackColor = true;
             this.ClearAttendanceButton.Click += new System.EventHandler(this.ClearAttendanceButton_Click);
             // 
-            // Form1
+            // LootSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::LootSystem.Properties.Resources.looty;
+            this.BackgroundImage = global::LootSystem.Properties.Resources.looty2;
             this.ClientSize = new System.Drawing.Size(1604, 802);
             this.Controls.Add(this.ClearAttendanceButton);
             this.Controls.Add(this.SetAttendanceButton);
@@ -799,7 +799,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "LootSystem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loot System Calculator";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

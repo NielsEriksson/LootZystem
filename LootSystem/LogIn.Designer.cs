@@ -60,24 +60,26 @@
             // 
             // GuildNameTxt
             // 
-            this.GuildNameTxt.Location = new System.Drawing.Point(397, 376);
+            this.GuildNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuildNameTxt.Location = new System.Drawing.Point(397, 368);
             this.GuildNameTxt.Name = "GuildNameTxt";
-            this.GuildNameTxt.Size = new System.Drawing.Size(135, 20);
+            this.GuildNameTxt.Size = new System.Drawing.Size(135, 31);
             this.GuildNameTxt.TabIndex = 2;
             // 
             // PasswordTxt
             // 
-            this.PasswordTxt.Location = new System.Drawing.Point(397, 508);
+            this.PasswordTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTxt.Location = new System.Drawing.Point(397, 497);
             this.PasswordTxt.Name = "PasswordTxt";
-            this.PasswordTxt.Size = new System.Drawing.Size(135, 20);
+            this.PasswordTxt.Size = new System.Drawing.Size(135, 31);
             this.PasswordTxt.TabIndex = 3;
             // 
             // LogInButton
             // 
             this.LogInButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LogInButton.Location = new System.Drawing.Point(603, 491);
+            this.LogInButton.Location = new System.Drawing.Point(605, 497);
             this.LogInButton.Name = "LogInButton";
-            this.LogInButton.Size = new System.Drawing.Size(114, 37);
+            this.LogInButton.Size = new System.Drawing.Size(114, 31);
             this.LogInButton.TabIndex = 4;
             this.LogInButton.Text = "LOG IN";
             this.LogInButton.UseVisualStyleBackColor = true;
@@ -97,6 +99,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LogIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogIn";
             this.ResumeLayout(false);
             this.PerformLayout();

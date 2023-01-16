@@ -21,6 +21,8 @@ namespace LootSystem
         public string GuildName;
         public string Password;
         public LootSystem lootsie;
+        public ConfirmNewDataBase newDataBase;
+        public bool correctInfo;
         public LogIn()
         {
             InitializeComponent();
@@ -28,32 +30,52 @@ namespace LootSystem
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            GuildName = GuildNameTxt.Text;
-            Password = PasswordTxt.Text;
-            string connectionString = "database="+GuildName+";server=localhost;uid= postgres;pwd=" + Password;
-            using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    lootsie = new LootSystem(connectionString);
-                    lootsie.Show();
 
-                    this.Hide();
-                }
-                catch (NpgsqlException ex)
-                {
-                    if (ex.Message == "28P01: password authentication failed for user \"postgres\"")
-                    {
-                        Debug.WriteLine(ex.Message);
-                        MessageBox.Show("Check Your Password!!");
-                    }
-                    else if (ex.Message == "3D000: database \"" + GuildName + "\" does not exist")
-                        Debug.WriteLine(ex.Message);               
-                        
-                }
-                
+            if (String.IsNullOrEmpty(GuildNameTxt.Text) || String.IsNullOrEmpty(PasswordTxt.Text))
+            {
+                correctInfo = false;
+                MessageBox.Show("Please Enter Fields Correctly");
             }
+            else
+            {
+                correctInfo = true;
+            }
+            if (correctInfo)
+            {
+                GuildName = GuildNameTxt.Text;
+                Password = PasswordTxt.Text;
+                string connectionString = "database=" + GuildName + ";server=localhost;uid= postgres;pwd=" + Password;
+                using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
+                {
+                    try
+                    {
+                        conn.Open();
+                        lootsie = new LootSystem(connectionString);
+                        lootsie.Show();
+
+                        this.Hide();
+                    }
+                    catch (NpgsqlException ex)
+                    {
+                        if (ex.Message == "28P01: password authentication failed for user \"postgres\"")
+                        {
+                            MessageBox.Show("Check Your Password!!");
+                        }
+                        else if (ex.Message == "3D000: database \"" + GuildName + "\" does not exist")
+                        {
+                            newDataBase = new ConfirmNewDataBase(connectionString, GuildName, Password);
+                            newDataBase.Show();
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
