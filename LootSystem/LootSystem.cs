@@ -13,6 +13,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using Npgsql;
 using System.Security.Claims;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LootSystem
 {
@@ -92,8 +93,8 @@ namespace LootSystem
             func = (controls) =>
             {
                 foreach (Control control in controls)
-                    if (control is TextBox)
-                        (control as TextBox).Clear();
+                    if (control is System.Windows.Forms.TextBox)
+                        (control as System.Windows.Forms.TextBox).Clear();
                     else
                         func(control.Controls);
             };
@@ -296,6 +297,19 @@ namespace LootSystem
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void CharacterToUpperCase(object sender, EventArgs e)
+        {
+            if (CharacterText.Text.Length > 0)
+            {
+                char[] v = CharacterText.Text.ToCharArray();
+                string s = v[0].ToString().ToUpper();
+                for (int b = 1; b < v.Length; b++)
+                    s += v[b].ToString();
+                CharacterText.Text = s;
+                CharacterText.Select(CharacterText.Text.Length, 0);
+            }
         }
     }
 }

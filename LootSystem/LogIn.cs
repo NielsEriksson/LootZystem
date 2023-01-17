@@ -77,5 +77,19 @@ namespace LootSystem
         {
             Application.Exit();
         }
+
+        private void GuildNameToUpper(object sender, EventArgs e)
+        {
+
+            if (GuildNameTxt.Text.Length > 0)
+            {
+                char[] v = GuildNameTxt.Text.ToCharArray();
+                string s = v[0].ToString().ToUpper();
+                for (int b = 1; b < v.Length; b++)
+                    s += v[b].ToString();
+                GuildNameTxt.Text = s;
+                GuildNameTxt.Select(GuildNameTxt.Text.Length, 0);
+            }
+        }
     }
 }

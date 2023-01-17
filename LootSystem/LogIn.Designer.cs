@@ -65,6 +65,7 @@
             this.GuildNameTxt.Name = "GuildNameTxt";
             this.GuildNameTxt.Size = new System.Drawing.Size(135, 31);
             this.GuildNameTxt.TabIndex = 2;
+            this.GuildNameTxt.TextChanged += new System.EventHandler(this.GuildNameToUpper);
             // 
             // PasswordTxt
             // 
@@ -100,7 +101,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LogIn";
+            this.Text = "LootZystem - Log In";
             this.ResumeLayout(false);
             this.PerformLayout();
 

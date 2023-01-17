@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmNewDataBase));
             this.CreateGuildBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.GuildNameTxt = new System.Windows.Forms.Label();
@@ -74,9 +75,10 @@
             this.Controls.Add(this.GuildNameTxt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CreateGuildBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConfirmNewDataBase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConfirmNewDataBase";
+            this.Text = "Confirm New Data Base";
             this.ResumeLayout(false);
             this.PerformLayout();
 

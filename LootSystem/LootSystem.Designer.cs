@@ -254,6 +254,7 @@
             this.CharacterText.Name = "CharacterText";
             this.CharacterText.Size = new System.Drawing.Size(95, 20);
             this.CharacterText.TabIndex = 13;
+            this.CharacterText.TextChanged += new System.EventHandler(this.CharacterToUpperCase);
             // 
             // label4
             // 
@@ -801,7 +802,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LootSystem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Loot System Calculator";
+            this.Text = "LootZystem";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
