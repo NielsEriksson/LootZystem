@@ -207,6 +207,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="lootyico.ico" />
+    <None Include="Resources\lootsies2.png" />
     <None Include="Resources\looty2.png" />
     <None Include="Resources\lootsies1.png" />
     <None Include="Resources\lootsies.png" />

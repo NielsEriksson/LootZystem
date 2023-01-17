@@ -90,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::LootSystem.Properties.Resources.lootsies1;
+            this.BackgroundImage = global::LootSystem.Properties.Resources.lootsies2;
             this.ClientSize = new System.Drawing.Size(1236, 722);
             this.Controls.Add(this.LogInButton);
             this.Controls.Add(this.PasswordTxt);
