@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{73017019-2FE3-434A-9904-B9F69AD80881}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>LootSystem</RootNamespace>
-    <AssemblyName>LootSystem</AssemblyName>
+    <RootNamespace>LootZystem</RootNamespace>
+    <AssemblyName>LootZystem</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -15,7 +15,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\eriks\OneDrive\Desktop\LootsystemApp\</PublishUrl>
+    <PublishUrl>D:\CodingProjects\LootZystem\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -25,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>18</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -207,6 +207,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="lootyico.ico" />
+    <None Include="Resources\uncheckedeye.png" />
     <None Include="Resources\lootsies2.png" />
     <None Include="Resources\looty2.png" />
     <None Include="Resources\lootsies1.png" />

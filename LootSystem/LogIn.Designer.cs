@@ -34,6 +34,7 @@
             this.GuildNameTxt = new System.Windows.Forms.TextBox();
             this.PasswordTxt = new System.Windows.Forms.TextBox();
             this.LogInButton = new System.Windows.Forms.Button();
+            this.PasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -65,6 +66,7 @@
             this.GuildNameTxt.Name = "GuildNameTxt";
             this.GuildNameTxt.Size = new System.Drawing.Size(135, 31);
             this.GuildNameTxt.TabIndex = 2;
+            this.GuildNameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.GuildNameTxt.TextChanged += new System.EventHandler(this.GuildNameToUpper);
             // 
             // PasswordTxt
@@ -74,11 +76,13 @@
             this.PasswordTxt.Name = "PasswordTxt";
             this.PasswordTxt.Size = new System.Drawing.Size(135, 31);
             this.PasswordTxt.TabIndex = 3;
+            this.PasswordTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PasswordTxt.UseSystemPasswordChar = true;
             // 
             // LogInButton
             // 
             this.LogInButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LogInButton.Location = new System.Drawing.Point(605, 497);
+            this.LogInButton.Location = new System.Drawing.Point(586, 497);
             this.LogInButton.Name = "LogInButton";
             this.LogInButton.Size = new System.Drawing.Size(114, 31);
             this.LogInButton.TabIndex = 4;
@@ -86,12 +90,25 @@
             this.LogInButton.UseVisualStyleBackColor = true;
             this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
             // 
+            // PasswordCheckBox
+            // 
+            this.PasswordCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.PasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.PasswordCheckBox.ForeColor = System.Drawing.Color.Transparent;
+            this.PasswordCheckBox.Location = new System.Drawing.Point(376, 498);
+            this.PasswordCheckBox.Name = "PasswordCheckBox";
+            this.PasswordCheckBox.Size = new System.Drawing.Size(15, 30);
+            this.PasswordCheckBox.TabIndex = 5;
+            this.PasswordCheckBox.UseVisualStyleBackColor = false;
+            this.PasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowHidePassword);
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::LootSystem.Properties.Resources.lootsies2;
+            this.BackgroundImage = global::LootZystem.Properties.Resources.lootsies2;
             this.ClientSize = new System.Drawing.Size(1236, 722);
+            this.Controls.Add(this.PasswordCheckBox);
             this.Controls.Add(this.LogInButton);
             this.Controls.Add(this.PasswordTxt);
             this.Controls.Add(this.GuildNameTxt);
@@ -114,5 +131,6 @@
         private System.Windows.Forms.TextBox GuildNameTxt;
         private System.Windows.Forms.TextBox PasswordTxt;
         private System.Windows.Forms.Button LogInButton;
+        private System.Windows.Forms.CheckBox PasswordCheckBox;
     }
 }

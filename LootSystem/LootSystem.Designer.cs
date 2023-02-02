@@ -31,6 +31,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LootSystem));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.DeletePlayerList = new System.Windows.Forms.ComboBox();
+            this.DeletePlayerButton = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.AddPlayerButtonClick = new System.Windows.Forms.Button();
             this.TypeText = new System.Windows.Forms.ComboBox();
@@ -91,6 +94,7 @@
             this.SetAttendanceButton = new System.Windows.Forms.Button();
             this.ClearAttendanceButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RollGrid)).BeginInit();
@@ -101,6 +105,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.AddPlayerButtonClick);
             this.groupBox1.Controls.Add(this.TypeText);
@@ -129,6 +134,35 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add A Player";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.DeletePlayerList);
+            this.groupBox6.Controls.Add(this.DeletePlayerButton);
+            this.groupBox6.Location = new System.Drawing.Point(400, 131);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(231, 49);
+            this.groupBox6.TabIndex = 26;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Delete Player";
+            // 
+            // DeletePlayerList
+            // 
+            this.DeletePlayerList.FormattingEnabled = true;
+            this.DeletePlayerList.Location = new System.Drawing.Point(16, 19);
+            this.DeletePlayerList.Name = "DeletePlayerList";
+            this.DeletePlayerList.Size = new System.Drawing.Size(95, 21);
+            this.DeletePlayerList.TabIndex = 28;
+            // 
+            // DeletePlayerButton
+            // 
+            this.DeletePlayerButton.Location = new System.Drawing.Point(133, 19);
+            this.DeletePlayerButton.Name = "DeletePlayerButton";
+            this.DeletePlayerButton.Size = new System.Drawing.Size(86, 21);
+            this.DeletePlayerButton.TabIndex = 0;
+            this.DeletePlayerButton.Text = "Delete Player";
+            this.DeletePlayerButton.UseVisualStyleBackColor = true;
+            this.DeletePlayerButton.Click += new System.EventHandler(this.DeletePlayerButton_Click);
             // 
             // label22
             // 
@@ -247,6 +281,7 @@
             this.TierText.Name = "TierText";
             this.TierText.Size = new System.Drawing.Size(95, 20);
             this.TierText.TabIndex = 15;
+            this.TierText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CharacterText
             // 
@@ -254,6 +289,7 @@
             this.CharacterText.Name = "CharacterText";
             this.CharacterText.Size = new System.Drawing.Size(95, 20);
             this.CharacterText.TabIndex = 13;
+            this.CharacterText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CharacterText.TextChanged += new System.EventHandler(this.CharacterToUpperCase);
             // 
             // label4
@@ -378,6 +414,7 @@
             this.NewValueText.Name = "NewValueText";
             this.NewValueText.Size = new System.Drawing.Size(95, 20);
             this.NewValueText.TabIndex = 26;
+            this.NewValueText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label13
             // 
@@ -459,6 +496,7 @@
             this.ilvlText.Name = "ilvlText";
             this.ilvlText.Size = new System.Drawing.Size(95, 20);
             this.ilvlText.TabIndex = 25;
+            this.ilvlText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -710,6 +748,7 @@
             this.NewIlvlText.Name = "NewIlvlText";
             this.NewIlvlText.Size = new System.Drawing.Size(95, 20);
             this.NewIlvlText.TabIndex = 26;
+            this.NewIlvlText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label19
             // 
@@ -788,7 +827,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::LootSystem.Properties.Resources.looty2;
+            this.BackgroundImage = global::LootZystem.Properties.Resources.looty2;
             this.ClientSize = new System.Drawing.Size(1604, 802);
             this.Controls.Add(this.ClearAttendanceButton);
             this.Controls.Add(this.SetAttendanceButton);
@@ -805,6 +844,7 @@
             this.Text = "LootZystem";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -880,6 +920,9 @@
         private System.Windows.Forms.CheckedListBox PlayerAttendanceList;
         private System.Windows.Forms.Button SetAttendanceButton;
         private System.Windows.Forms.Button ClearAttendanceButton;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ComboBox DeletePlayerList;
+        private System.Windows.Forms.Button DeletePlayerButton;
     }
 }
 

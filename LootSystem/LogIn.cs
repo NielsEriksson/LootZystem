@@ -91,5 +91,17 @@ namespace LootSystem
                 GuildNameTxt.Select(GuildNameTxt.Text.Length, 0);
             }
         }
+
+        private void ShowHidePassword(object sender, EventArgs e)
+        {
+            if (PasswordCheckBox.Checked)
+            {
+                PasswordTxt.UseSystemPasswordChar = false;
+            }
+            else if (!PasswordCheckBox.Checked)
+            {
+                PasswordTxt.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

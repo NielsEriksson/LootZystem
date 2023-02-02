@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LootSystem", "LootSystem\LootSystem.csproj", "{73017019-2FE3-434A-9904-B9F69AD80881}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LootZystem", "LootSystem\LootZystem.csproj", "{73017019-2FE3-434A-9904-B9F69AD80881}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

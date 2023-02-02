@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LootSystem.Properties {
+namespace LootZystem.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace LootSystem.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LootSystem.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LootZystem.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -157,6 +157,16 @@ namespace LootSystem.Properties {
             get {
                 object obj = ResourceManager.GetObject("Swordcursor2", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uncheckedeye {
+            get {
+                object obj = ResourceManager.GetObject("uncheckedeye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

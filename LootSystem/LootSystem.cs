@@ -29,10 +29,11 @@ namespace LootSystem
         public NpgsqlConnection con;
 
         NpgsqlDataReader dr;
+        private NpgsqlCommand deletePlayer;
 
         public LootSystem(string ConnectionString)
         {
-            Cursor cur = new Cursor(Properties.Resources.Swordcursor2.Handle);
+            Cursor cur = new Cursor(LootZystem.Properties.Resources.Swordcursor2.Handle);
             this.Cursor = cur;            
             con = new NpgsqlConnection(ConnectionString);
             InitializeComponent();
@@ -41,11 +42,15 @@ namespace LootSystem
             NpgsqlCommand LoadCharacters = new NpgsqlCommand("Select character From public.\"PlayersData\" ORDER BY \"character\" ASC ", con);
             dr = LoadCharacters.ExecuteReader();
             PlayerListText.Items.Clear();
+            PlayerListText2.Items.Clear();
+            PlayerAttendanceList.Items.Clear();
+            DeletePlayerList.Items.Clear();
             while (dr.Read())
             {
                 PlayerListText.Items.Add(dr.GetValue(0));
                 PlayerListText2.Items.Add(dr.GetValue(0));
                 PlayerAttendanceList.Items.Add(dr.GetValue(0));
+                DeletePlayerList.Items.Add(dr.GetValue(0));
             }
             con.Close();
             LoadPlayers();
@@ -204,11 +209,15 @@ namespace LootSystem
             NpgsqlCommand LoadCharacters = new NpgsqlCommand("Select character From public.\"PlayersData\" ORDER BY \"character\" ASC ", con);
             dr = LoadCharacters.ExecuteReader();
             PlayerListText.Items.Clear();
+            PlayerListText2.Items.Clear();
+            PlayerAttendanceList.Items.Clear();
+            DeletePlayerList.Items.Clear();
             while (dr.Read())
             {
                 PlayerListText.Items.Add(dr.GetValue(0));
                 PlayerListText2.Items.Add(dr.GetValue(0));
                 PlayerAttendanceList.Items.Add(dr.GetValue(0));
+                DeletePlayerList.Items.Add(dr.GetValue(0));
             }
             con.Close();
         }
@@ -310,6 +319,34 @@ namespace LootSystem
                 CharacterText.Text = s;
                 CharacterText.Select(CharacterText.Text.Length, 0);
             }
+        }
+
+        private void DeletePlayerButton_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            deletePlayer = new NpgsqlCommand("DELETE FROM public.\"PlayersILVL\"  WHERE public.\"PlayersILVL\".character = @Character", con);
+            deletePlayer.Parameters.AddWithValue("@Character", DeletePlayerList.Text);
+            deletePlayer.ExecuteNonQuery();
+            deletePlayer = new NpgsqlCommand("DELETE FROM public.\"PlayersData\"  WHERE public.\"PlayersData\".character = @Character", con);
+            deletePlayer.Parameters.AddWithValue("@Character", DeletePlayerList.Text);
+            deletePlayer.ExecuteNonQuery();
+            NpgsqlCommand LoadCharacters = new NpgsqlCommand("Select character From public.\"PlayersData\" ORDER BY \"character\" ASC ", con);
+            dr = LoadCharacters.ExecuteReader();
+            PlayerListText.Items.Clear();
+            PlayerListText2.Items.Clear();
+            PlayerAttendanceList.Items.Clear();
+            DeletePlayerList.Items.Clear();
+            while (dr.Read())
+            {
+                PlayerListText.Items.Add(dr.GetValue(0));
+                PlayerListText2.Items.Add(dr.GetValue(0));
+                PlayerAttendanceList.Items.Add(dr.GetValue(0));
+                DeletePlayerList.Items.Add(dr.GetValue(0));
+            }
+            con.Close();
+            LoadPlayers();
+            DeletePlayerList.Text = null;
         }
     }
 }
